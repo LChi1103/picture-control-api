@@ -1,0 +1,12 @@
+version : "2"
+services:
+  api:
+    restart: always
+    container_name: picture-control-api
+    image: sanyecloud.top:8887/picture-control-api/api:latest
+    ports:
+      - "8887:8887"
+    volumes:
+      - ./data/images:/images
+    environment:
+      - TZ=Asia/Shanghai
